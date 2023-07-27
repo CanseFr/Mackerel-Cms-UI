@@ -1,3 +1,4 @@
+
 <div class="container-dashboardAdmin">
     <section  [class.menu-admin-list-left]="menuSectionAdmin.value == true"
               [class.menu-admin-list-left-hidden]="menuSectionAdmin.value == false">
@@ -14,6 +15,9 @@
       <ng-container *ngIf="isSectionPageContantAdmin.value == false">
 
           <app-admin-dashboard-home></app-admin-dashboard-home>
+<!--        TODO REGLER PROBLEME URL-->
+<!--        <router-outlet ></router-outlet>-->
+
 
       </ng-container>
 
@@ -23,7 +27,9 @@
           <div [class.admin-menu-selected] ="isSectionPageContantAdmin.value == true"
                [class.container-dash-page-selected-hidden] ="isSectionPageContantAdmin.value != true">
 
-              <router-outlet></router-outlet>
+              <div class="tab-display-contant-selected-admin">
+                      <router-outlet ></router-outlet>
+              </div>
 
           </div>
       </ng-container>

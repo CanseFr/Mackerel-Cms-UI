@@ -49,4 +49,5 @@ export class HeaderComponent implements OnInit{
     this.indexPage.indexActualPage.next("contact")
   }
 
+    protected readonly localStorage = localStorage;
 }

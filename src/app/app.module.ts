@@ -23,6 +23,8 @@ import { FestivalDashComponent } from './page/admin/pages-dashboard/festival-das
 import { ArtistesDashComponent } from './page/admin/pages-dashboard/artistes-dash/artistes-dash.component';
 import { ContactDashComponent } from './page/admin/pages-dashboard/contact-dash/contact-dash.component';
 import { AdminDashboardHomeComponent } from './page/admin/admin-dashboard-home/admin-dashboard-home.component';
+import { LoginComponent } from './page/admin/login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -46,12 +48,14 @@ import { AdminDashboardHomeComponent } from './page/admin/admin-dashboard-home/a
     ArtistesDashComponent,
     ContactDashComponent,
     AdminDashboardHomeComponent,
+    LoginComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [

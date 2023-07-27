@@ -1,10 +1,24 @@
 <header>
   <div class="nav-bar">
-    <a (click)="openMenuList()" ><img src="assets/icon-admin/menu-icon.svg" alt=""></a>
-    <a href="/admin">DashBoard</a>
-    <a href="#">Option</a>
+    <a style="flex-grow: 0.5;margin-left: 12px;" (click)="openMenuList()" ><img src="assets/icon-admin/menu-icon.svg" alt=""></a>
+    <a style="flex-grow: 0.5" href="/admin">DashBoard</a>
+    <a style="flex-grow: 0.5" href="#">Option</a>
+
+    <div style="flex-grow: 10" class="toggle-admin-ux" *ngIf="this.router.url.substring(0,4).match('[admin]') ">
+          <p>Go site web</p>
+        <a  href="/">
+          <img src="assets/icon-admin/toggle-on.svg" alt="">
+        </a>
+    </div>
+    <div style="flex-grow: 10" class="toggle-admin-ux" *ngIf="!this.router.url.substring(0,4).match('[admin]') ">
+      <p>Go admin</p>
+      <a  href="/admin">
+          <img src="assets/icon-admin/toggle-off.svg" alt="">
+        </a>
+    </div>
+
   </div>
 </header>
 
-  <router-outlet></router-outlet>
+<!--  <router-outlet></router-outlet>-->
 

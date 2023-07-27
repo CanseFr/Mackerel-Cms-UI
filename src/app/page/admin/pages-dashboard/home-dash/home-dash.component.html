@@ -1,1 +1,40 @@
-<p>home-dash works!</p>
+<ng-container *ngIf="homeContent | async as content">
+  <br>
+  <div class="scroll-delimit-form-modify-page">
+      <form action="">
+
+        <div class="block-info-form">
+            <h2>Block 1</h2>
+          <input value="{{content.message}}" >
+          <input value="{{content.auteur}}" >
+          <input value="{{content.titre}}" >
+        </div>
+
+        <div class="block-info-form">
+            <h2>Block 2</h2>
+            <h3>Article 1</h3>
+          <input value="{{content.articleList[0].titre}}" >
+          <input value="{{content.articleList[0].message}}" >
+          <input value="{{content.articleList[0].btn}}" >
+          <input value="{{content.articleList[0].img}}" >
+
+            <h3>Article 2</h3>
+          <input value="{{content.articleList[1].titre}}" >
+          <input value="{{content.articleList[1].message}}" >
+          <input value="{{content.articleList[1].btn}}" >
+          <input value="{{content.articleList[1].img}}" >
+        </div>
+
+        <div class="block-info-form">
+            <h2>Block 3</h2>
+          <input value="{{content.homeSectionBottoms[0].title}}" >
+          <input value="{{content.homeSectionBottoms[0].btn}}" >
+          <input value="{{content.homeSectionBottoms[0].img}}" >
+        </div>
+      </form>
+      <button class="btn-form-modif-page" >Modifier</button>
+  </div>
+
+</ng-container>
+
+

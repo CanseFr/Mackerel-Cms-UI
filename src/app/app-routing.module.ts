@@ -15,15 +15,18 @@ import {FestivalDashComponent} from "./page/admin/pages-dashboard/festival-dash/
 import {ArtistesDashComponent} from "./page/admin/pages-dashboard/artistes-dash/artistes-dash.component";
 import {ContactDashComponent} from "./page/admin/pages-dashboard/contact-dash/contact-dash.component";
 import {FooterDashComponent} from "./page/admin/pages-dashboard/footer-dash/footer-dash.component";
+import {LoginComponent} from "./page/admin/login/login.component";
+import {AdminGuardService} from "./service/config/guard/admin-guard.service";
 
 const routes: Routes = [
+  {path: "login", component : LoginComponent},
   {path: "", component : HomeComponent},
   {path: "club", component : ClubComponent},
   {path: "event", component : EventComponent},
   {path: "festival", component : FestivalComponent},
   {path: "artiste", component : ArtisteComponent},
   {path: "contact", component : ContactComponent},
-  {path: "admin", component : AdminDashboardComponent,
+  {path: "admin", component : AdminDashboardComponent, canActivate : [AdminGuardService],
       children:[
         {path: "Header", component : HeaderDashComponent},
         {path: "Home", component : HomeDashComponent},

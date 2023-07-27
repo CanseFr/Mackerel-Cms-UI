@@ -12,8 +12,8 @@ export class HomeComponent {
 
   homeContent = this.homeService.homeContantList
   headerContent = this.headerService.headerContantList
-  constructor(public indexPage: IndexpageService,private homeService: HomeService,private headerService: HeaderServiceService) {
-  }
+  constructor(public indexPage: IndexpageService,private homeService: HomeService,private headerService: HeaderServiceService) {}
+
   ngOnInit(): void {
     this.homeService.getHomeContent()
   }

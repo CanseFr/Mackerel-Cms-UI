@@ -28,6 +28,10 @@ body, html {
 //  border: solid 1px red;
 //}
 
+.display-none{
+  display: none;
+}
+
 //======================================================================================================================
 //                                                  CLIENT
 //======================================================================================================================
@@ -332,9 +336,8 @@ header{
   height: 50px;
   background-color: rgba(155, 155, 155, 0.24);
   div.nav-bar{
-    width: 20%;
     display: flex;
-    justify-content: space-around;
+    align-items: stretch;;
     padding-top: 12px;
     a{
       img{
@@ -359,6 +362,26 @@ header{
       position: relative;
       transition: all .2s ease-in-out;
     }
+
+    div.toggle-admin-ux{
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      font-family: BuiltRegular;
+      margin-right: 12px;
+      p{
+        margin: 1px;
+        margin-top: 3px;
+      }
+      a{
+        display: flex;
+        flex-direction: row;
+        letter-spacing: 0px;
+        margin: -3px;
+        margin-left: 6px;
+      }
+    }
+
   }
 }
 
@@ -368,13 +391,13 @@ div.container-dashboardAdmin{
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: 100%;
+    height: 90%;
     transition: all .8s ease-in-out;
 
   section.menu-admin-list-left{
       width: 20%;
-      height: 100%;
-      background-color: #c4c4c4;
+    height: 105.5%;
+    background-color: #c4c4c4;
       transition: all .8s  ease-in-out;
       box-shadow: 10px 2px 10px #00000030;
       z-index: 1;
@@ -408,7 +431,7 @@ div.container-dashboardAdmin{
     }
     section.admin-menu-selected{
       width: 80%;
-      height: 100%;
+      height: 105.5%;
       background-color: #ffffff;
       transition: all .8s ease-in-out;
       div.container-dash-page-selected{
@@ -424,10 +447,11 @@ div.container-dashboardAdmin{
       }
     }
 }
+
 //Hidden
 section.menu-admin-list-left-hidden{
   width: 0;
-  height: 100%;
+  height: 105.5%;
   background-color: #ffffff;
   transition: all .8s ease-in-out;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.17);
@@ -453,15 +477,62 @@ section.menu-admin-list-left-hidden{
 //Hidden
 section.admin-menu-selected-hidden{
   width: 100%;
-  height: 100%;
+  height: 105.5%;
   background-color: #c4c4c4;
   transition: all .8s ease-in-out;
 }
 
+//=====================================================INNER DashBoard Page SELECTED======================================================
+
+.tab-display-contant-selected-admin{
+  width: 95%;
+  background-color: #eee;
+  height: 96%;
+  margin: 35px;
+  border-radius: 15px;
+  box-shadow: 10px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.admin-menu-selected{
+  height: 96%;
+}
+
+.block-info-form {
+  width: 90%;
+  background-color: #ccc;
+  margin: auto;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+  padding: 23px;
+  border-radius: 13px;
+  box-shadow: 10px 2px 10px rgba(0, 0, 0, 0.25);
+  font-family: BuiltRegular;
+}
+
+.scroll-delimit-form-modify-page{
+  height: 92%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+  button.btn-form-modif-page{
+    margin: auto;
+    display: flex;
+    margin-top: 25px;
+    font-size: 2em;
+    padding: 15px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: BuiltRegular;
+    border: solid 3px #56aa56;
+    border-radius: 8px;
+  }
+}
 
 
 
-
-
-
-
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

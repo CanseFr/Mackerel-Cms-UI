@@ -1,4 +1,7 @@
+<app-header-admin *ngIf=" localStorage.getItem('token') === 'admin' "></app-header-admin>
+
 <section class="header-select">
+
 
   <ng-container *ngIf="headerContent | async as info">
 

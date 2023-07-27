@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AdminDashboardHomeComponent {
 
+  constructor() {
+    document.querySelector(".header-select")!.classList.add("display-none")
+    document.querySelector("app-footer")!.classList.add("display-none")
+  }
+
 }

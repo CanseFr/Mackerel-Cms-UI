@@ -7,10 +7,9 @@ import {Router, RouterModule} from "@angular/router";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'MackerelLikeCms';
+  title = 'Mackerel Club';
   constructor(public route: Router) {
   }
-
 
   protected readonly localStorage = localStorage;
 }
