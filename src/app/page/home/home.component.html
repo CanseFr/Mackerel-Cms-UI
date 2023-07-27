@@ -1,0 +1,43 @@
+  <ng-container *ngIf="homeContent | async as info">
+      <section class="home-block1">
+
+            <div class="home-message">
+              <p>{{info.message}}</p>
+              <p>{{info.auteur}}</p>
+            </div>
+
+            <div class="title-top-article">
+              <h1>{{info.titre}}</h1>
+            </div>
+
+            <div class="home-article">
+              <div class="article-left">
+                <img src="assets/img/home/{{info.articleList[0].img}}" alt="">
+                <h3>{{info.articleList[0].titre}}</h3>
+                <p>{{info.articleList[0].message}}</p>
+                <button>{{info.articleList[0].btn}}</button>
+              </div>
+
+              <div class="article-right">
+                <img src="assets/img/home/{{info.articleList[1].img}}" alt="">
+                <h3>{{info.articleList[1].titre}}</h3>
+                <p>{{info.articleList[1].message}}</p>
+                <button>{{info.articleList[1].btn}}</button>
+              </div>
+            </div>
+
+      </section>
+
+      <section class="home-block2">
+          <img src="assets/img/home/{{info.homeSectionBottoms[0].img}}">
+
+        <div  class="picture-bottom">
+          <p>{{info.homeSectionBottoms[0].btn}}</p>
+          <a (click)="contactPage()" routerLink="/contact" href="#">
+            <button>{{info.homeSectionBottoms[0].title}}</button>
+          </a>
+
+        </div>
+
+      </section>
+  </ng-container>

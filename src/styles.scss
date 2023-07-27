@@ -1,0 +1,467 @@
+//=======================================FONT========================================
+
+@font-face {
+  font-family: 'BuiltBold';
+  src: url('assets/fonts/built_titling_bd.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BuiltRegular';
+  src: url('assets/fonts/coolvetica_rg.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BuiltIt';
+  src: url('assets/fonts/built_titling_lt_it.otf') format('truetype');
+}
+
+//=======================================BASE========================================
+
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+// Help
+//*{
+//  border: solid 1px red;
+//}
+
+//======================================================================================================================
+//                                                  CLIENT
+//======================================================================================================================
+
+//=====================================================HEADER NAV======================================================
+
+section.header-select {
+  img {
+    width: 100%;
+  }
+
+  ul {
+    position: relative;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 46%;
+    margin: auto;
+    z-index: 1;
+    top: 21px;
+    height: 0;
+    font-family: 'BuiltBold', serif;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 2em;
+      transition: all .3s ease;
+
+    }
+
+    a:hover {
+      color: #9f7e7e;
+      transition: all .3s ease;
+      transform: scale(1.2);
+      font-size: 2.1em;
+      transition: all .3s ease;
+      letter-spacing: 4px;
+    }
+  }
+    .container-btn-header-home{
+      display: flex;
+      flex-direction: column;
+      width: 8%;
+      margin: auto;
+      position: relative;
+      top: -292px;
+
+      button.btn-first{
+        border-radius: 30px;
+        border-color: #ffffff;
+        background-color: #ad3258;
+        line-height: 50px;
+        width: 160px;
+        color: #ffffff;
+        font-family: 'BuiltRegular';
+        letter-spacing: 1px;
+        margin-bottom: 7px;
+        cursor: pointer;
+        transition: all .3s ease;
+      }
+      button.btn-second{
+        border-radius: 30px;
+        border-color: #ad3258;
+        background-color: #ffffff;
+        line-height: 50px;
+        width: 160px;
+        color: #ad3258;
+        font-family: 'BuiltRegular';
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all .3s ease;
+      }
+      button.btn-first:hover{
+        background-color: #ffffff;
+        color: #000000;
+        transition: all .3s ease;
+        letter-spacing: 3px;
+      }
+      button.btn-second:hover{
+        border-color: #ffffff;
+        color: #000000;
+        transition: all .3s ease;
+        letter-spacing: 3px;
+      }
+
+
+
+    }
+
+}
+
+.minimize-bg-home {
+}
+
+.minimize-bg-club {
+  height: 710px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.minimize-bg-event {
+  height: 710px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.minimize-bg-festival {
+  height: 710px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.minimize-bg-artiste {
+}
+
+.minimize-bg-contact {
+  height: 710px;
+  width: 100%;
+  object-fit: cover;
+}
+
+//=====================================================HOME======================================================
+
+section.home-block1{
+
+  div.home-message{
+    text-align: center;
+    font-family: 'BuiltIt';
+    letter-spacing: 1px;
+    font-size: 2em;
+    p{}
+    p{}
+  }
+
+  div.title-top-article{
+    h1{
+      text-align: center;
+      font-family: 'BuiltRegular' ;
+      letter-spacing: 1px;
+      font-size: 3em;
+    }
+  }
+
+  div.home-article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    padding: 100px;
+
+    div.article-left{
+      font-family: BuiltRegular;
+      text-align: center;
+      img{
+        height: 300px;
+        width: 485px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px #8c8c8c;
+      }
+      h3{
+
+      }
+      p{
+        width: 85%;
+        margin: auto;
+        color: #4e5652;
+      }
+      button{
+        margin-top: 10px;
+        border : none;
+        background-color: #85d22d;
+        line-height: 50px;
+        width: 160px;
+        color: #000000;
+        font-family: 'BuiltRegular';
+        letter-spacing: 2px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: all .3s ease;
+      }
+      button:hover{
+        background-color: #507506;
+        color: white;
+        letter-spacing: 4px;
+        transition: all .3s ease;
+      }
+    }
+    div.article-right{
+      font-family: BuiltRegular;
+      text-align: center;
+      img{
+        height: 300px;
+        width: 89%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px #8c8c8c;
+      }
+      h3{
+
+      }
+      p{
+        width: 85%;
+        margin: auto;
+        color: #4e5652;
+      }
+      button{
+        margin-top: 10px;
+        border : none;
+        background-color: #85d22d;
+        line-height: 50px;
+        width: 160px;
+        color: #000000;
+        font-family: 'BuiltRegular';
+        letter-spacing: 2px;
+        cursor: pointer;
+        border-radius: 30px;
+        transition: all .3s ease;
+      }
+      button:hover{
+        background-color: #507506;
+        color: white;
+        letter-spacing: 4px;
+        transition: all .3s ease;
+      }
+    }
+  }
+}
+
+section.home-block2{
+    background-color: #6d7872;
+    img{
+      margin-top: 6%;
+      width: 100%;
+    }
+  div.picture-bottom{
+    position: relative;
+    text-align: center;
+    top: -360px;
+    p{
+      font-family: 'BuiltBold', serif;
+      font-size: 2em;
+      color: #14261c;
+      letter-spacing: 2px;
+    }
+    button{
+      margin-top: 10px;
+      border : none;
+      background-color: #85d22d;
+      line-height: 50px;
+      width: 160px;
+      color: #000000;
+      font-family: 'BuiltRegular';
+      letter-spacing: 2px;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: all .3s ease;
+    }
+    button:hover{
+      background-color: #507506;
+      color: white;
+      letter-spacing: 4px;
+      transition: all .3s ease;
+    }
+  }
+}
+
+
+//=====================================================FOOTER======================================================
+section.footer{
+  div.logo-footer-reseau{
+
+    img{
+      cursor: pointer;
+    }
+  }
+    height: 200px;
+    background-color: #14261c;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+    justify-content: center;
+    color: white;
+    font-family: BuiltRegular;
+    letter-spacing: 1px;
+}
+
+
+//======================================================================================================================
+//                                                  ADMIN
+//======================================================================================================================
+
+//=====================================================HEADER======================================================
+
+header{
+  width: 100%;
+  height: 50px;
+  background-color: rgba(155, 155, 155, 0.24);
+  div.nav-bar{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 12px;
+    a{
+      img{
+        width: 28px;
+        transition: all .2s ease-in-out;
+      }
+    }
+    a:hover{
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+      font-family: BuiltRegular;
+      letter-spacing: 1px;
+      transition: all .2s ease-in-out;
+    }
+    a:hover{
+      color: #4f4f4f;
+      letter-spacing: 4px;
+      position: relative;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+//=====================================================DashBoard======================================================
+
+div.container-dashboardAdmin{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    transition: all .8s ease-in-out;
+
+  section.menu-admin-list-left{
+      width: 20%;
+      height: 100%;
+      background-color: #c4c4c4;
+      transition: all .8s  ease-in-out;
+      box-shadow: 10px 2px 10px #00000030;
+      z-index: 1;
+      transition: all .8s ease-in-out;
+      div.container-page-display{
+        width: 80%;
+        margin: auto;
+        margin-top: 35px;
+        transition: all .8s ease-in-out;
+        div.page-display{
+          border: solid 1px bisque;
+          text-align: center;
+          margin-top: 11px;
+          padding: 9px;
+          border-radius: 6px;
+          font-family: BuiltIt;
+          letter-spacing: 1px;
+          font-size: 1.5em;
+          box-shadow: 10px 2px 10px #00000030;
+          transition: all .8s ease-in-out;
+        }
+        div.page-display:hover{
+          background-color: #ffffff;
+          letter-spacing: 5px;
+          color: #281e1e;
+          cursor: pointer;
+          box-shadow: 10px 2px 10px rgba(0, 0, 0, 0.56);
+          transition: all .3s ease-in-out;
+        }
+      }
+    }
+    section.admin-menu-selected{
+      width: 80%;
+      height: 100%;
+      background-color: #ffffff;
+      transition: all .8s ease-in-out;
+      div.container-dash-page-selected{
+        width: 95%;
+        background-color: #d0d0d0;
+        height: 93%;
+        margin: 35px;
+        border-radius: 15px;
+        box-shadow: 10px 2px 10px rgba(0, 0, 0, 0.25);
+      }
+      div.container-dash-page-selected-hidden{
+        display: none;
+      }
+    }
+}
+//Hidden
+section.menu-admin-list-left-hidden{
+  width: 0;
+  height: 100%;
+  background-color: #ffffff;
+  transition: all .8s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.17);
+  z-index: 1;
+  div.container-page-display{
+    width: 80%;
+    margin: auto;
+    transition: all .8s ease-in-out;
+    div.page-display{
+      border: solid 0 bisque;
+      text-align: center;
+      margin-top: 0;
+      padding: 0;
+      border-radius: 0;
+      font-family: BuiltIt;
+      letter-spacing: 0;
+      font-size: 0;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      transition: all .8s ease-in-out;
+    }
+  }
+}
+//Hidden
+section.admin-menu-selected-hidden{
+  width: 100%;
+  height: 100%;
+  background-color: #c4c4c4;
+  transition: all .8s ease-in-out;
+}
+
+
+
+
+
+
+
+

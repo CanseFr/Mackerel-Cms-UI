@@ -1,0 +1,31 @@
+<section class="header-select">
+
+  <ng-container *ngIf="headerContent | async as info">
+
+      <ul>
+          <li><a (click)="imgHome()" routerLink="/" href="#">{{info.pageSelect1}}</a></li>
+          <li><a (click)="imgClub()" routerLink="/club" href="#">{{info.pageSelect2}}</a></li>
+          <li><a (click)="imgEvent()" routerLink="/event" href="#">{{info.pageSelect3}}</a></li>
+          <li><a (click)="imgFestival()" routerLink="/festival" href="#">{{info.pageSelect4}}</a></li>
+          <li><a (click)="imgArtiste()" routerLink="/artiste" href="#">{{info.pageSelect5}}</a></li>
+          <li><a (click)="imgContact()" routerLink="/contact" href="#">{{info.pageSelect6}}</a></li>
+      </ul>
+
+      <img  [class.minimize-bg-home]="indexPage.indexActualPage.value === 'home' "
+            [class.minimize-bg-club]="indexPage.indexActualPage.value === 'club' "
+            [class.minimize-bg-event]="indexPage.indexActualPage.value === 'event' "
+            [class.minimize-bg-festival]="indexPage.indexActualPage.value === 'festival' "
+            [class.minimize-bg-artiste]="indexPage.indexActualPage.value === 'artiste' "
+            [class.minimize-bg-contact]="indexPage.indexActualPage.value === 'contact' "
+            alt="BackGround Header" src="assets/img/{{indexPage.urlActualPage.value}}">
+
+      <ng-container *ngIf="indexPage.indexActualPage.value == 'home' ">
+          <div class="container-btn-header-home">
+              <button class="btn-first">{{info.btn1}}</button>
+              <button class="btn-second">{{info.btn2}}</button>
+          </div>
+      </ng-container>
+
+  </ng-container>
+
+</section>

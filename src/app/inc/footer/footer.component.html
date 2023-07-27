@@ -1,0 +1,22 @@
+<section class="footer">
+  <ng-container *ngIf="footerListContent | async as footerInfo ">
+    <div class="logo-footer-reseau">
+      <a href="{{footerInfo.linkPicto1}}"  target="_blank">
+        <img  src="assets/icon/{{footerInfo.picto1}}">
+      </a>
+      <a href="{{footerInfo.linkPicto2}}"  target="_blank">
+        <img src="assets/icon/{{footerInfo.picto2}}">
+      </a>
+      <a href="{{footerInfo.linkPicto3}}"  target="_blank">
+        <img src="assets/icon/{{footerInfo.picto3}}">
+      </a>
+      <a href="{{footerInfo.linkPicto4}}"  target="_blank">
+        <img src="assets/icon/{{footerInfo.picto4}}">
+      </a>
+    </div>
+
+      <p>{{footerInfo.txtInfo1}}</p>
+      <p>{{footerInfo.txtInfo2}}</p>
+
+  </ng-container>
+</section>

@@ -1,0 +1,35 @@
+<div class="container-dashboardAdmin">
+    <section  [class.menu-admin-list-left]="menuSectionAdmin.value == true"
+              [class.menu-admin-list-left-hidden]="menuSectionAdmin.value == false">
+
+    <div class="container-page-display" *ngIf="listAllPageContent | async as page " >
+      <div class="page-display" routerLink="/admin/{{element}}" (click)="displaySelectedContentPage()"  *ngFor="let element of page" >{{element}}</div>
+    </div>
+
+    </section>
+
+    <section  [class.admin-menu-selected] ="menuSectionAdmin.value == true"
+              [class.admin-menu-selected-hidden]="menuSectionAdmin.value == false">
+
+      <ng-container *ngIf="isSectionPageContantAdmin.value == false">
+
+          <app-admin-dashboard-home></app-admin-dashboard-home>
+
+      </ng-container>
+
+<!--   GESTION DU DASHBOARD PANEL   -->
+
+      <ng-container *ngIf="isSectionPageContantAdmin.value == true">
+          <div [class.admin-menu-selected] ="isSectionPageContantAdmin.value == true"
+               [class.container-dash-page-selected-hidden] ="isSectionPageContantAdmin.value != true">
+
+              <router-outlet></router-outlet>
+
+          </div>
+      </ng-container>
+
+
+    </section>
+</div>
+
+
