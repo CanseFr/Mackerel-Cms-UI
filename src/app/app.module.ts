@@ -25,6 +25,8 @@ import { ContactDashComponent } from './page/admin/pages-dashboard/contact-dash/
 import { AdminDashboardHomeComponent } from './page/admin/admin-dashboard-home/admin-dashboard-home.component';
 import { LoginComponent } from './page/admin/login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatInputModule,
+    ReactiveFormsModule,
 
   ],
   providers: [

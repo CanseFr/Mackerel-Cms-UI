@@ -1,40 +1,93 @@
 <ng-container *ngIf="homeContent | async as content">
-  <br>
-  <div class="scroll-delimit-form-modify-page">
-      <form action="">
+    <br>
+    <div class="scroll-delimit-form-modify-page">
+        <form (ngSubmit)="onSubmit()" [formGroup]="formulaire" >
 
-        <div class="block-info-form">
-            <h2>Block 1</h2>
-          <input value="{{content.message}}" >
-          <input value="{{content.auteur}}" >
-          <input value="{{content.titre}}" >
-        </div>
+            <div class="block-info-form">
+                <h2>Block 1</h2>
 
-        <div class="block-info-form">
-            <h2>Block 2</h2>
-            <h3>Article 1</h3>
-          <input value="{{content.articleList[0].titre}}" >
-          <input value="{{content.articleList[0].message}}" >
-          <input value="{{content.articleList[0].btn}}" >
-          <input value="{{content.articleList[0].img}}" >
+              <mat-form-field style="width: 600px" >
+                <mat-label>Message</mat-label>
+                <textarea matInput formControlName="block1_message" value="{{content.message}}"></textarea>
+              </mat-form-field>
 
-            <h3>Article 2</h3>
-          <input value="{{content.articleList[1].titre}}" >
-          <input value="{{content.articleList[1].message}}" >
-          <input value="{{content.articleList[1].btn}}" >
-          <input value="{{content.articleList[1].img}}" >
-        </div>
+                    <mat-form-field>
+                        <mat-label>Auteur</mat-label>
+                        <input formControlName="block1_auteur" value="{{content.auteur}}" matInput>
+                    </mat-form-field>
 
-        <div class="block-info-form">
-            <h2>Block 3</h2>
-          <input value="{{content.homeSectionBottoms[0].title}}" >
-          <input value="{{content.homeSectionBottoms[0].btn}}" >
-          <input value="{{content.homeSectionBottoms[0].img}}" >
-        </div>
-      </form>
-      <button class="btn-form-modif-page" >Modifier</button>
-  </div>
+                    <mat-form-field>
+                        <mat-label>Titre</mat-label>
+                        <input formControlName="block1_titre" value="{{content.titre}}" matInput>
+                    </mat-form-field>
+            </div>
+
+            <div class="block-info-form">
+                <h2>Block 2</h2>
+                <h3>Article 1</h3>
+                    <mat-form-field>
+                        <mat-label>Titre</mat-label>
+                        <input formControlName="block2_Art1_titre"  value="{{content.articleList[0].titre}}" matInput>
+                    </mat-form-field>
+
+
+                    <mat-form-field style="width: 600px" >
+                      <mat-label>Message</mat-label>
+                      <textarea matInput formControlName="block2_Art1_message"  value="{{content.articleList[0].message}}"></textarea>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Boutton</mat-label>
+                        <input formControlName="block2_Art1_btn" value="{{content.articleList[0].btn}}" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Image</mat-label>
+                        <input formControlName="block2_Art1_img" value="{{content.articleList[0].img}}" matInput>
+                    </mat-form-field>
+
+                <h3>Article 2</h3>
+                    <mat-form-field>
+                        <mat-label>Titre</mat-label>
+                        <input formControlName="block2_Art2_titre" value="{{content.articleList[1].titre}}" matInput>
+                    </mat-form-field>
+
+                  <mat-form-field style="width: 600px" >
+                    <mat-label>Message</mat-label>
+                    <textarea matInput  formControlName="block2_Art2_message" value="{{content.articleList[1].message}}"></textarea>
+                  </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Boutton</mat-label>
+                        <input formControlName="block2_Art2_btn" value="{{content.articleList[1].btn}}" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Image</mat-label>
+                        <input formControlName="block2_Art2_img" value="{{content.articleList[1].img}}" matInput>
+                    </mat-form-field>
+            </div>
+
+            <div class="block-info-form">
+                    <h2>Block 3</h2>
+                    <mat-form-field>
+                        <mat-label>Titre</mat-label>
+                        <input formControlName="block3_title" value="{{content.homeSectionBottoms[0].title}}" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Boutton</mat-label>
+                        <input formControlName="block3_btn" value="{{content.homeSectionBottoms[0].btn}}" matInput>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-label>Image</mat-label>
+                        <input type="file"  #fileInput formControlName="block3_img" value="{{content.homeSectionBottoms[0].img}}" matInput>
+                    </mat-form-field>
+
+            </div>
+        </form>
+        <button type="submit" value="valider" class="btn-form-modif-page">Modifier</button>
+    </div>
 
 </ng-container>
-
-
